@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57179/Services/UserService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:57179/Services/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="BaseResponseOfAddUserResponsedqZ23X9b">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AddUserResponse" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response_code" type="xs:int" />
+      <xs:element minOccurs="0" name="is_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="tns:AddUserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponseOfAddUserResponsedqZ23X9b" nillable="true" type="tns:BaseResponseOfAddUserResponsedqZ23X9b" />
+  <xs:complexType name="AddUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_added_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddUserResponse" nillable="true" type="tns:AddUserResponse" />
+  <xs:complexType name="BaseResponseOfUserDtodqZ23X9b">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserDto" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response_code" type="xs:int" />
+      <xs:element minOccurs="0" name="is_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="tns:UserDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponseOfUserDtodqZ23X9b" nillable="true" type="tns:BaseResponseOfUserDtodqZ23X9b" />
+  <xs:complexType name="UserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="birth_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gender" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDto" nillable="true" type="tns:UserDto" />
+  <xs:complexType name="BaseResponseOfGetUsersPaginatedResponsedqZ23X9b">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="GetUsersPaginatedResponse" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response_code" type="xs:int" />
+      <xs:element minOccurs="0" name="is_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="tns:GetUsersPaginatedResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponseOfGetUsersPaginatedResponsedqZ23X9b" nillable="true" type="tns:BaseResponseOfGetUsersPaginatedResponsedqZ23X9b" />
+  <xs:complexType name="GetUsersPaginatedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="users" nillable="true" type="tns:ArrayOfUserDto" />
+      <xs:element minOccurs="0" name="total_users" type="xs:int" />
+      <xs:element minOccurs="0" name="current_page" type="xs:int" />
+      <xs:element minOccurs="0" name="page_size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUsersPaginatedResponse" nillable="true" type="tns:GetUsersPaginatedResponse" />
+  <xs:complexType name="ArrayOfUserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDto" nillable="true" type="tns:UserDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDto" nillable="true" type="tns:ArrayOfUserDto" />
+  <xs:complexType name="BaseResponseOfUpdateUserResponsedqZ23X9b">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UpdateUserResponse" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response_code" type="xs:int" />
+      <xs:element minOccurs="0" name="is_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="tns:UpdateUserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponseOfUpdateUserResponsedqZ23X9b" nillable="true" type="tns:BaseResponseOfUpdateUserResponsedqZ23X9b" />
+  <xs:complexType name="UpdateUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_updated_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUserResponse" nillable="true" type="tns:UpdateUserResponse" />
+  <xs:complexType name="BaseResponseOfDeleteUserResponsedqZ23X9b">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="BaseResponseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DeleteUserResponse" Namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="response_code" type="xs:int" />
+      <xs:element minOccurs="0" name="is_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errors" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="tns:DeleteUserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponseOfDeleteUserResponsedqZ23X9b" nillable="true" type="tns:BaseResponseOfDeleteUserResponsedqZ23X9b" />
+  <xs:complexType name="DeleteUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_deleted_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteUserResponse" nillable="true" type="tns:DeleteUserResponse" />
+</xs:schema>

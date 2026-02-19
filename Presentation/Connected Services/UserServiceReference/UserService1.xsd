@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57179/Services/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" />
+  <xs:import schemaLocation="http://localhost:57179/Services/UserService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" />
+  <xs:element name="AddUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q1:AddUserContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="AddUserResult" nillable="true" type="q2:BaseResponseOfAddUserResponsedqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q3:GetUserByIdContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="GetUserByIdResult" nillable="true" type="q4:BaseResponseOfUserDtodqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersPaginated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q5:GetUsersPaginatedContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersPaginatedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="GetUsersPaginatedResult" nillable="true" type="q6:BaseResponseOfGetUsersPaginatedResponsedqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByNamePaginated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q7:GetUsersByNamePaginatedContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByNamePaginatedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="GetUsersByNamePaginatedResult" nillable="true" type="q8:BaseResponseOfGetUsersPaginatedResponsedqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q9:UpdateUserContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="UpdateUserResult" nillable="true" type="q10:BaseResponseOfUpdateUserResponsedqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" minOccurs="0" name="contract" nillable="true" type="q11:DeleteUserContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Responses" minOccurs="0" name="DeleteUserResult" nillable="true" type="q12:BaseResponseOfDeleteUserResponsedqZ23X9b" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

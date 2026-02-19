@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PruebaTecnica.Business.DataContracts.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57179/Services/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AddUserContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birth_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gender" type="ser:char" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddUserContract" nillable="true" type="tns:AddUserContract" />
+  <xs:complexType name="GetUserByIdContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUserByIdContract" nillable="true" type="tns:GetUserByIdContract" />
+  <xs:complexType name="GetUsersPaginatedContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="current_page" type="xs:int" />
+      <xs:element minOccurs="0" name="order_desc" type="xs:boolean" />
+      <xs:element minOccurs="0" name="page_size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUsersPaginatedContract" nillable="true" type="tns:GetUsersPaginatedContract" />
+  <xs:complexType name="GetUsersByNamePaginatedContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="current_page" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_desc" type="xs:boolean" />
+      <xs:element minOccurs="0" name="page_size" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUsersByNamePaginatedContract" nillable="true" type="tns:GetUsersByNamePaginatedContract" />
+  <xs:complexType name="UpdateUserContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="birth_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="gender" type="ser:char" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateUserContract" nillable="true" type="tns:UpdateUserContract" />
+  <xs:complexType name="DeleteUserContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeleteUserContract" nillable="true" type="tns:DeleteUserContract" />
+</xs:schema>
