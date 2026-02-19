@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="CreateDatabase.sql" />
+  </Folder>
+  <Project Path="BDO/BDO.csproj" Id="33ab1952-1102-4c26-a41b-4a04838a5589" />
+  <Project Path="Business/Business.csproj" Id="cf3d2810-585a-4b43-8794-aff8eac0204d" />
+  <Project Path="Persistence/DataAccess.csproj" Id="4fc836d5-3ced-46e3-88af-c0e00693223d" />
+  <Project Path="Presentation/Presentation.csproj" Id="643cf3b0-399d-4a34-9e4c-5b0c03f4d532">
+    <BuildDependency Project="Business/Business.csproj" />
+  </Project>
+</Solution>
